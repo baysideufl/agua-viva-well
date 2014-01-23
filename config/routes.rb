@@ -1,4 +1,14 @@
 AguaViva::Application.routes.draw do
+  resources :measurements
+
+  resources :cycles
+
+  resources :users
+
+  resources :projects
+
+  resources :wells
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
