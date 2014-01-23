@@ -1,0 +1,35 @@
+<h1>Listing cycles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Well</th>
+      <th>Start time</th>
+      <th>End time</th>
+      <th>Average pressure</th>
+      <th>Duration unsafe</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cycles.each do |cycle| %>
+      <tr>
+        <td><%= cycle.well %></td>
+        <td><%= cycle.start_time %></td>
+        <td><%= cycle.end_time %></td>
+        <td><%= cycle.average_pressure %></td>
+        <td><%= cycle.duration_unsafe %></td>
+        <td><%= link_to 'Show', cycle %></td>
+        <td><%= link_to 'Edit', edit_cycle_path(cycle) %></td>
+        <td><%= link_to 'Destroy', cycle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cycle', new_cycle_path %>

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Project:</strong>
+  <%= @well.project %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @well.longitude %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @well.latitude %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @well.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @well.description %>
+</p>
+
+<p>
+  <strong>Pipe diameter:</strong>
+  <%= @well.pipe_diameter %>
+</p>
+
+<p>
+  <strong>Max safe pressure:</strong>
+  <%= @well.max_safe_pressure %>
+</p>
+
+<%= link_to 'Edit', edit_well_path(@well) %> |
+<%= link_to 'Back', wells_path %>

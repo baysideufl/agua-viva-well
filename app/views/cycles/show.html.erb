@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Well:</strong>
+  <%= @cycle.well %>
+</p>
+
+<p>
+  <strong>Start time:</strong>
+  <%= @cycle.start_time %>
+</p>
+
+<p>
+  <strong>End time:</strong>
+  <%= @cycle.end_time %>
+</p>
+
+<p>
+  <strong>Average pressure:</strong>
+  <%= @cycle.average_pressure %>
+</p>
+
+<p>
+  <strong>Duration unsafe:</strong>
+  <%= @cycle.duration_unsafe %>
+</p>
+
+<%= link_to 'Edit', edit_cycle_path(@cycle) %> |
+<%= link_to 'Back', cycles_path %>

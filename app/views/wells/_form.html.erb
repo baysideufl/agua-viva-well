@@ -1,0 +1,45 @@
+<%= form_for(@well) do |f| %>
+  <% if @well.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@well.errors.count, "error") %> prohibited this well from being saved:</h2>
+
+      <ul>
+      <% @well.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :project_id %><br>
+    <%= f.text_field :project_id %>
+  </div>
+  <div class="field">
+    <%= f.label :longitude %><br>
+    <%= f.text_field :longitude %>
+  </div>
+  <div class="field">
+    <%= f.label :latitude %><br>
+    <%= f.text_field :latitude %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :pipe_diameter %><br>
+    <%= f.text_field :pipe_diameter %>
+  </div>
+  <div class="field">
+    <%= f.label :max_safe_pressure %><br>
+    <%= f.text_field :max_safe_pressure %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

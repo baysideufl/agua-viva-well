@@ -1,0 +1,37 @@
+<%= form_for(@cycle) do |f| %>
+  <% if @cycle.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cycle.errors.count, "error") %> prohibited this cycle from being saved:</h2>
+
+      <ul>
+      <% @cycle.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :well_id %><br>
+    <%= f.text_field :well_id %>
+  </div>
+  <div class="field">
+    <%= f.label :start_time %><br>
+    <%= f.datetime_select :start_time %>
+  </div>
+  <div class="field">
+    <%= f.label :end_time %><br>
+    <%= f.datetime_select :end_time %>
+  </div>
+  <div class="field">
+    <%= f.label :average_pressure %><br>
+    <%= f.text_field :average_pressure %>
+  </div>
+  <div class="field">
+    <%= f.label :duration_unsafe %><br>
+    <%= f.text_field :duration_unsafe %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

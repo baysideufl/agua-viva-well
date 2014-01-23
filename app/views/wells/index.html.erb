@@ -1,0 +1,39 @@
+<h1>Listing wells</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Longitude</th>
+      <th>Latitude</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Pipe diameter</th>
+      <th>Max safe pressure</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @wells.each do |well| %>
+      <tr>
+        <td><%= well.project %></td>
+        <td><%= well.longitude %></td>
+        <td><%= well.latitude %></td>
+        <td><%= well.name %></td>
+        <td><%= well.description %></td>
+        <td><%= well.pipe_diameter %></td>
+        <td><%= well.max_safe_pressure %></td>
+        <td><%= link_to 'Show', well %></td>
+        <td><%= link_to 'Edit', edit_well_path(well) %></td>
+        <td><%= link_to 'Destroy', well, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Well', new_well_path %>
